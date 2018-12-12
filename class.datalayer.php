@@ -318,7 +318,7 @@ class DataLayer implements dlConfig {
      */
     protected function debug($msg) {
         if ($this->debug) {
-            echo "<div id=\"debug\" class=\"hide\">:$msg </div>";
+            echo "<div id=\"debug\" class=\"sql\">$msg </div>";
         }
     }
 
