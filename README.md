@@ -15,7 +15,9 @@ to code and use an interface.
 That being said, include class.dlConfig.php and class.datalayer.php into your project. You can now use the datalayer class to write 
 MySQL queries with ease.
 
-As an example, let's pretend that you have a database called "datalayer". To access it, we'll need to initialize the datalayer. 
+As an example, let's pretend that you have a database called "datalayer". To access it, we'll need to initialize the DataLayer. 
 
-Please view the example.php page to see this script in action.
-    
+Please view the example.sql file for the assumed sql (generated with phpMyAdmin) and example.php page to see how this code could be used
+in a development or production environment.
+
+As always, I am open to constructive criticism. 
