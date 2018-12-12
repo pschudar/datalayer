@@ -15,29 +15,7 @@ to code and use an interface.
 That being said, include class.dlConfig.php and class.datalayer.php into your project. You can now use the datalayer class to write 
 MySQL queries with ease.
 
-As an example, let's pretend that you have a database called "my_users". To access it, we'll need to initialize the datalayer.
+As an example, let's pretend that you have a database called "datalayer". To access it, we'll need to initialize the datalayer. 
 
-<?php
-$dl = new DataLayer();
-$dl->debug = false; # If true, this prints the SQL to screen. Great for error checking your code
-
-$user = $dl->select('user_first, user_last, user_email', 'my_users', '', 'user_registered DESC');
-# resolves to: SELECT user_first, user_last, user_email FROM my_users ORDER BY user_registered DESC
-
-if(count($user) <= 0 {
-echo "0 Users";
-exit();
-}
-echo "<ul>";
-foreach ($user as $d_row) {
-    foreach($d_row as $field=>$val) {
-        $$field = $val; # assigns table field names to stored values. $user_first = Paul, etc.
-    }
-    echo "<li>$user_first</li>
-    <li>$user_last</li>
-    <li>$user_email</li>";
-}
-echo "</ul>";
-
-More to come soon.
+Please view the example.php page to see this script in action.
     
