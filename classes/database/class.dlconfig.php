@@ -1,5 +1,7 @@
 <?php
 
+namespace database;
+
 /**
  * DataLayer Interface
  * 
@@ -23,8 +25,8 @@ interface dlConfig {
 
     const DBHOST = 'localhost';     # your database host name
     const DBUSER = 'user';         # your database user name
-    const DBPASS = '';            # your database user's pass
-    const DBNAME = 'vs_vlot';    # your database
+    const DBPASS = 'pa$$w0rd';    # your database user's pass
+    const DBNAME = 'datalayer';  # your database
 
     public function getError();
 
