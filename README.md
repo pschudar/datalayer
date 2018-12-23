@@ -6,7 +6,8 @@ The differences between database platforms can make it extremely difficult to cr
 DataLayer is a basic utility class that separates a lot of the database facing code from the logic of a project as a whole. The class broadly achieves two things
 
     1. It presents a conduit between an application and the database.
-    2. It automates the generation of SQL for a range of frequently performed operations, like SELECT and UPDATE statements.
+    2. It automates the generation of SQL for a range of frequently performed
+       operations, such as SELECT and UPDATE statements.
 
 DataLayer provides two main benefits for a user of the class.
 
