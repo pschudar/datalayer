@@ -1,9 +1,8 @@
 <?php
-# Include DataLayer config and class
-require_once('class.dlconfig.php');
-require_once('class.datalayer.php');
+# Include autoloader #DataLayer class and #dlConfig interface
+require_once('classes/autoload/class.autoloader.php');
 # Initialize the DataLayer class
-$dl = new DataLayer();
+$dl = new database\DataLayer();
 $dl->debug = true; # If true, this prints the SQL to screen. Great for error checking your code
 
 echo '<h4>Simple Example of pulling all data from the the users table</h4>';
