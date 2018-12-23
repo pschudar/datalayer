@@ -1,10 +1,12 @@
 # datalayer
 An attempt at database abstraction with PHP
 
-I originally found this little snippet of code buried in a copy of Sam's Teach Yourself PHP in 24 hours back in the early 2000's.
+I originally found a similar snippet of code buried in a copy of Sam's Teach Yourself PHP in 24 hours back in the early 2000's.
 It was meant to be used as a vehicle to learning OOP with PHP 4.x, though it's been modified by me to be used with PHP 5 and now, 7.
 
-There are two files to include in a project in order to use dataLayer. class.dlConfig.php and datalayer.php
+As the original code is now obsolete, and the modifications I have applied are extensive, I consider this code to be a completely
+separate work, which is why it's now licensed under the GPL. I do not believe the original code was licensed - it was public domain
+from my understanding.
 
 First, open class.dlConfig.php and configure with your database host, username, password, and finally, the name of your database.
 That's it. Pretty simple stuff.
