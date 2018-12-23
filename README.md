@@ -33,8 +33,8 @@ open class.dlconfig.php located within the directory /classes/database/class.dlc
 Configure the host, username, password, and finally, the database to match your host or local setup.
 
 You may have noticed that dlConfig is actually a trait. It's named class.dlconfig.php in this example so 
-it's automatically loaded by the included Autoloader class. Within the trait, a few abstract classes are defined. 
-If a new class is created for a different database server, these classes must be fleshed out to keep the API the same.
+it's automatically loaded by the included Autoloader class. Within the trait, a few abstract methods are listed. 
+If a new class is created for a different database server, these abstract methods must be fleshed out in the new class to keep the API the same.
 
 USAGE
 
