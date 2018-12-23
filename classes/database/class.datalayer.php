@@ -20,12 +20,12 @@ namespace database;
  *
  * @category Database Access
  * @package DataLayer
- * @author  Matt Zandstra
- * @internal Editor: Paul Schudar
+ * @author  Paul Schudar
  * @copyright Copyright (c) 2015
  * @license http://opensource.org/licenses/gpl-3.0.html GNU Public License
  * @version 1.3.3
  * @internal Last Modified: 03.02.16
+ * @internal Derivative of Matt Zandstra's 'DataLayer' class from Sam's Teach Yourself PHP in 24 Hours
  * */
 class DataLayer implements dlConfig {
 
@@ -82,8 +82,9 @@ class DataLayer implements dlConfig {
     /**
      * getLastId()
      * 
-     * This method was protected however I needed it to be public for
-     * testing ajax calls.
+     * This method was originally protected, however, it is
+     * very useful for ajax calls in other scripts.
+     * 
      * Simply returns the last inserted ID
      * @return int
      */
@@ -331,7 +332,7 @@ class DataLayer implements dlConfig {
      * it is simply tacked onto the string WHERE and returned. If the condition is an array 
      * however, the field name/value pairs are first constructed and stored in an array called 
      * $cond_pairs. The implode() function is then used to join the new array into a single string, 
-     * the field name/value pairs are separated by the string “AND�?.
+     * the field name/value pairs are separated by the string âANDâ?.
      * @param $condition
      * @return string
      */
