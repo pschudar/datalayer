@@ -1,25 +1,30 @@
 # datalayer
-An attempt at database abstraction with PHP
+An attempt at building a Database Abstraction Class with PHP
 
-I originally found a similar snippet of code buried in a copy of Sam's Teach Yourself PHP in 24 hours back in the early 2000's.
-It was meant to be used as a vehicle to learning OOP with PHP 4.x, though it's been modified by me to be used with PHP 5 and now, 7.
+The differences between database platforms can make it extremely difficult to create durable and transportable code. If the database code is tightly-knit into a project, it can be difficult to migrate from one database server to another.
 
-As the original code is now obsolete, and the modifications I have applied are extensive, I consider this code to be a completely
-separate work, which is why it's now licensed under the GPL. I do not believe the original code was licensed - it was public domain
-from my understanding.
+DataLayer is a basic utility class that separates a lot of the database facing code from the logic of a project as a whole. The class broadly achieves two things
 
-First, open class.dlConfig.php and configure with your database host, username, password, and finally, the name of your database.
-That's it. Pretty simple stuff.
+    1. It presents a conduit between an application and the database.
+    2. It automates the generation of SQL for a range of frequently performed operations, like SELECT and UPDATE statements.
 
-I should note here that class.dlConfig.php was not originally included with Matt Zandstra's work. It's something I wrote while learning
-to code and use an interface.
+DataLayer provides two main benefits for a user of the class.
 
-That being said, include class.dlConfig.php and class.datalayer.php into your project. You can now use the datalayer class to write 
-MySQL queries with ease.
+    1. In automating simple queries, it saves teh need to construct SQL statements on the fly
+    2. In providing a clear interface to its functionality, it should safeguard portability.
 
-As an example, let's pretend that you have a database called "datalayer". To access it, we'll need to initialize the DataLayer. 
+If your project is moved from MySQL to PostgreSQL, MongoDB or any other database server, then an alternative class can be written that maintains the same functionality but with a different implementation behind the scenes.
 
-Please view the example.sql file for the assumed sql (generated with phpMyAdmin) and example.php page to see how this code could be used
-in a development or production environment.
+An important item to consider is that different database engines tend to support different SQL syntax and features. SQL statements written to work with MySQL and MariaDB may not work well with others. This class keeps things simple and as 'standard' as possible, although, it can handle some pretty complex SQL statements.
 
-As always, I am open to constructive criticism. 
+The example.sql file includes the assumed sql necessary to build the example tables. The example.php file includes code showing how to use the basics of the class.
+
+SETUP
+
+open class.dlconfig.php located within the directory /classes/database/class.dlconfig.php. 
+Configure the host, username, password, and finally, the database to match your host or local setup.
+
+USAGE
+
+In a live environment - It's my recommendation that class.dlconfig.php be moved OUTSIDE of the web accessible directory structure.
+If your web root is /home/user/public_html - I would store this file somewhere in the /user/ directory. This keeps your database information secure if there's ever an issue with your server or the configuration is changed somehow.
