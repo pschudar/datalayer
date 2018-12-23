@@ -41,6 +41,8 @@ USAGE
 In a live environment - It's my recommendation that class.dlconfig.php be moved OUTSIDE of the web accessible directory structure.
 If your web root is /home/user/public_html - I would store this file somewhere in the /user/ directory. This keeps your database information secure if there's ever an issue with your server or the configuration is changed somehow.
 
+Doing this will require that you manually include the class.dlconfig.php file or modify the autoloader to bring it in first.
+
 Further Examples
 
 I'll be adding more examples in the future showing how to use DataLayer with more complex SQL queries (INNER JOIN, LEFT JOIN, etc).
