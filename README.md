@@ -21,6 +21,7 @@ An important item to consider is that different database engines tend to support
 How to use the DataLayer class:
 
 -- example.sql
+
 -- example.php
 
 example.sql contains SQL code to  build the example tables we're working with in example.php. Run in phpMyAdmin.
