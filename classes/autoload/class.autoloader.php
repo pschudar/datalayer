@@ -4,7 +4,7 @@ class Autoloader {
 
     static public function loader($class) {
         $filename = "classes/" . str_replace("\\", '/class.', strtolower($class)) . ".php";
-        if (file_exists($filename)) {
+        if (file_exists($filename) && is_readable($filename)) {
             require_once($filename);
             if (class_exists($class)) {
                 return true;
